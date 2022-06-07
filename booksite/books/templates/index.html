@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load rest_framework %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<h1>Hi Mr Czeslaw</h1>
+
+{% for el in books %}
+    <h2>Name: {{ el.title }}</h2>
+    <p>Author: {{ el.author }}</p>
+    <p>Acquired: {{ el.acquired }}</p>
+    <p>Publication date: {{ el.published_year.year}}</p>
+    <br>
+{% endfor %}
+</body>
+</html>
